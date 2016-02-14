@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{911101CF-F529-4261-9A5A-1E88252C5990}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotA2StatsParser</RootNamespace>
+    <AssemblyName>DotA2StatsParser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Dotabuff\AbilityController.cs" />
+    <Compile Include="Controller\Dotabuff\AliasController.cs" />
+    <Compile Include="Controller\Dotabuff\AttributeController.cs" />
+    <Compile Include="Controller\Dotabuff\DotabuffMappingController.cs" />
+    <Compile Include="Controller\Dotabuff\ItemDetailsController.cs" />
+    <Compile Include="Controller\Dotabuff\ItemController.cs" />
+    <Compile Include="Controller\IQueryStringable.cs" />
+    <Compile Include="Controller\MainController.InternalController.cs" />
+    <Compile Include="Controller\MappingController.cs" />
+    <Compile Include="Controller\QueryStringController.cs" />
+    <Compile Include="Controller\VersionController.cs" />
+    <Compile Include="Controller\Yasp\WordCloudController.cs" />
+    <Compile Include="Controller\Yasp\YaspMappingController.cs" />
+    <Compile Include="Exceptions\Dota2StatParserException.cs" />
+    <Compile Include="Model\Dotabuff\Ability.cs" />
+    <Compile Include="Model\Dotabuff\AbilityBuild.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IItemStat.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IAbility.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IAlias.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IDamage.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IFriend.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IHero.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IHeroAttributes.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IItem.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IItemDetais.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IKda.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\ILanePresence.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\ILifetimeStat.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IMatch.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IMatchExtended.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IPlayer.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IPopularity.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IStat.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\ISteamUser.cs" />
+    <Compile Include="Model\Dotabuff\Interfaces\IWinRate.cs" />
+    <Compile Include="Model\Dotabuff\Path\MatchPath.cs" />
+    <Compile Include="Model\Dotabuff\PlayerMatchesOptions.cs" />
+    <Compile Include="Model\Dotabuff\SteamUser.cs" />
+    <Compile Include="Controller\Dotabuff\VersusController.cs" />
+    <Compile Include="Controller\Dotabuff\FriendController.cs" />
+    <Compile Include="Controller\Dotabuff\PlayerController.cs" />
+    <Compile Include="Controller\HealthCheck.cs" />
+    <Compile Include="Controller\MainController.Constants.cs" />
+    <Compile Include="Dataparser.cs" />
+    <Compile Include="Controller\Dotabuff\HeroController.cs" />
+    <Compile Include="Controller\Dotabuff\LanePresenceController.cs" />
+    <Compile Include="Controller\Dotabuff\LifetimeStatController.cs" />
+    <Compile Include="Controller\Dotabuff\MatchController.cs" />
+    <Compile Include="Controller\Dotabuff\StatController.cs" />
+    <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Model\Dotabuff\Alias.cs" />
+    <Compile Include="Model\Dotabuff\Damage.cs" />
+    <Compile Include="Model\Dotabuff\HeroAttributes.cs" />
+    <Compile Include="Model\Dotabuff\Item.cs" />
+    <Compile Include="Model\Dotabuff\ItemDetails.cs" />
+    <Compile Include="Model\Dotabuff\ItemStat.cs" />
+    <Compile Include="Model\Dotabuff\Popularity.cs" />
+    <Compile Include="Model\Dotabuff\Versus.cs" />
+    <Compile Include="Model\Dotabuff\Enums.cs" />
+    <Compile Include="Model\Dotabuff\Friend.cs" />
+    <Compile Include="Model\Dotabuff\LanePresence.cs" />
+    <Compile Include="Model\Dotabuff\WinRate.cs" />
+    <Compile Include="Model\HealthCheck\HealthCheckResult.cs" />
+    <Compile Include="Model\HealthCheck\Interfaces\IHealthCheckResult.cs" />
+    <Compile Include="Model\JsonPaths.cs" />
+    <Compile Include="Controller\JsonController.cs" />
+    <Compile Include="Model\Dotabuff\Hero.cs" />
+    <Compile Include="Model\Dotabuff\Kda.cs" />
+    <Compile Include="Model\Dotabuff\Match.cs" />
+    <Compile Include="Model\Dotabuff\Player.cs" />
+    <Compile Include="Model\Dotabuff\LifetimeStat.cs" />
+    <Compile Include="Model\Dotabuff\Stat.cs" />
+    <Compile Include="Model\Yasp\Interfaces\IWordCloud.cs" />
+    <Compile Include="Model\Yasp\WordCloud.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controller\HtmlDocumentController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mapping\Yasp\0.1.0.0\Enums.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Yasp\0.1.0.0\HtmlAttributes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Yasp\0.1.0.0\QueryStrings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Yasp\0.1.0.0\Selectors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Yasp\0.1.0.0\Urls.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Yasp\0.1.0.0\XPaths.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Mapping\Dotabuff\0.1.0.0\HtmlAttributes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Dotabuff\0.1.0.0\Urls.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Dotabuff\0.1.0.0\Selectors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Dotabuff\0.1.0.0\Enums.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Dotabuff\0.1.0.0\QueryStrings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Dotabuff\0.1.0.0\XPaths.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mapping\Version.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

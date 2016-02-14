@@ -1,0 +1,36 @@
+﻿{
+  "QueryStringMapping": {
+    "Player": {
+      "Matches": {
+        "Hero": {
+          "Dotabuff": "hero",
+          "Parser": "Hero"
+        },
+        "SkillBracket": {
+          "Dotabuff": "skill_bracket",
+          "Parser": "Skillbracket"
+        },
+        "Lobby": {
+          "Dotabuff": "lobby_type",
+          "Parser": "Type"
+        },
+        "Mode": {
+          "Dotabuff": "game_mode",
+          "Parser": "Mode"
+        },
+        "Date": {
+          "Dotabuff": "date",
+          "Parser": "Date"
+        },
+        "Region": {
+          "Dotabuff": "region",
+          "Parser": "Region"
+        },
+        "Duration" : {
+          "Dotabuff": "duration",
+          "Parser": "Duration"
+        }
+      }
+    }
+  }
+}

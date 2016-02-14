@@ -1,0 +1,12 @@
+﻿{
+   "Selector": {
+    "Item": {
+      "Details": {
+        "Stats": {
+          "Value": "value",
+          "Name": "label"
+        }
+      }
+    }
+  }
+}

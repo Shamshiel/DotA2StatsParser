@@ -1,0 +1,21 @@
+﻿{
+    "0.1.0.0": {
+        "IsDeprecated" : "false",
+        "Dotabuff": {
+            "Enums": "",
+            "HtmlAttributes": "",
+            "QueryStrings": "",
+            "Selectors": "",
+            "Urls": "",
+            "XPaths": ""
+        },
+        "Yasp": {
+            "Enums": "",
+            "HtmlAttributes": "",
+            "QueryStrings": "",
+            "Selectors": "",
+            "Urls": "",
+            "XPaths": ""
+        }
+    }
+}

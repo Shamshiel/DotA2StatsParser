@@ -1,0 +1,9 @@
+﻿{
+    "URL": {
+        "Main": "http://yasp.co/",
+        "Players": {
+            "URL": "https://yasp.co/players/",
+            "WordCloud": "https://yasp.co/players/{0}/wordcloud"
+        }
+    }
+}

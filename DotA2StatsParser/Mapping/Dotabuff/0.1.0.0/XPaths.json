@@ -1,0 +1,110 @@
+﻿{
+  "Players": {
+    "Player": {
+      "PlayerName": "//div[contains(@class, 'header-content-title')]/h1/text()",
+      "PlayerImage": "//div[contains(@class, 'image-container-player')]/a/img",
+      "LatestMatches": {
+        "List": "//div[contains(@class, 'performances-overview')]/div",
+        "Id": "//div[contains(@class, 'performances-overview')]/div[{0}]",
+        "Hero": "//div[contains(@class, 'performances-overview')]/div[{0}]/div[1]/div[2]/div[1]/a",
+        "Result": "//div[contains(@class, 'performances-overview')]/div[{0}]/div[2]/div[2]/a[1]/text()",
+        "TimeAgo": "//div[contains(@class, 'performances-overview')]/div[{0}]/div[2]/div[2]/div[1]/time[1]/@datetime[1]",
+        "Type": "//div[contains(@class, 'performances-overview')]/div[{0}]/div[3]/div[2]/text()",
+        "Mode": "//div[contains(@class, 'performances-overview')]/div[{0}]/div[3]/div[2]/div[1]",
+        "Duration": "//div[contains(@class, 'performances-overview')]/div[{0}]/div[4]/div[2]/text()",
+        "Kda": "//div[contains(@class, 'performances-overview')]/div[{0}]/div[5]/div[2]/span[1]",
+        "Skillbracket": "//div[contains(@class, 'performances-overview')]/div[{0}]//div[contains(@class, 'subtext')]/text()"
+      },
+      "MostPlayedHeroes": {
+        "List": "//div[contains(@class, 'heroes-overview')]/div",
+        "Hero": "//div[contains(@class, 'heroes-overview')]/div[{0}]/div[1]/div[2]/div[1]/a",
+        "MatchesPlayed": "//div[contains(@class, 'heroes-overview')]/div[{0}]/div[2]/div[2]/text()",
+        "Winrate": "//div[contains(@class, 'heroes-overview')]/div[{0}]/div[3]/div[2]/text()",
+        "Kda": "//div[contains(@class, 'heroes-overview')]/div[{0}]/div[4]/div[2]/text()"
+      },
+      "LifetimeStats": "//section[2]//table",
+      "Aliases": "//section[3]//table",
+      "Friends": "//div[@data-portable= 'show-player-friends']//tr[contains(@data-link-to, 'players')]",
+      "SteamData": {
+        "Id": "//section[@class = 'player-aliases']/header/small/a",
+        "ProfileUrl": "//section[@class = 'player-aliases']/header/small/a"
+      }
+    }
+  },
+
+  "Matches": {
+    "Table": "//section[2]//table/tbody/tr",
+    "Id": "//section[2]/article/table/tbody/tr[{0}]/td[2]/a",
+    "Hero": "//section[2]/article/table/tbody/tr[{0}]/td[1]/div/a",
+    "Skillbracket": "//section[2]/article/table/tbody/tr[{0}]//td[contains(@class, 'cell-large')]/div[contains(@class, 'subtext')]/text()",
+    "Result": "//section[2]/article/table/tbody/tr[{0}]//a[contains(@class, 'won')]/text()|//section[2]/article/table/tbody/tr[{0}]//a[contains(@class, 'lost')]/text()|//section[2]/article/table/tbody/tr[{0}]//a[contains(@class, 'abandoned')]",
+    "TimeAgo": "//section[2]/article/table/tbody/tr[{0}]/td[3]/div[contains(@class, 'subtext')]/time/@datetime",
+    "Type": "//section[2]/article/table/tbody/tr[{0}]//td[contains(@class, 'r-none-mobile')]/text()",
+    "Mode": "//section[2]/article/table/tbody/tr[{0}]//td[contains(@class, 'r-none-mobile')]/div[contains(@class, 'subtext')]/text()",
+    "Duration": "//section[2]/article/table/tbody/tr[{0}]/td[5]/text()",
+    "Kda": "//tr[{0}]/td[6]//span[contains(@class, 'kda-record')]",
+    "Items": "//tr[{0}]//div[contains(@class, 'image-container-item')]/a"
+  },
+
+  "Heroes": {
+    "Table": "//section[2]/footer/div",
+    "Name": "//section[2]/footer/div/a[{0}]/div/div[1]",
+    "Hero": {
+      "General": {
+        "Image": "/html[1]/body[1]/div[1]/div[7]/div[2]/div[1]/div[1]/div[1]/div/a/img",
+        "Roles": "/html[1]/body[1]/div[1]/div[7]/div[2]/div[1]/div[1]/div[2]/h1/small",
+        "Popularity": "/html[1]/body[1]/div[1]/div[7]/div[2]/div[1]/div[2]/dl[1]/dd",
+        "WinRate": "/html[1]/body[1]/div[1]/div[7]/div[2]/div[1]/div[2]/dl[2]/dd/span"
+      },
+      "LanePresence": "//section[1]/article//table",
+      "MostUsedItems": {
+        "List": "//tr[contains(@data-link-to, 'items')]"
+      },
+      "BestVersus": "//section[5]/article/table/tbody",
+      "WorstVersus": "//section[6]/article/table/tbody",
+      "Attributes": {
+        "Main": {
+          "Strength": "//table[@class = 'main']/tbody/tr[2]/td[1]",
+          "Agility": "//table[@class = 'main']/tbody/tr[2]/td[2]",
+          "Intelligence": "//table[@class = 'main']/tbody/tr[2]/td[3]"
+        },
+        "Other": {
+          "MovementSpeed": "//table[@class = 'other']/tbody/tr[1]/td[2]",
+          "SightRange": "//table[@class = 'other']/tbody/tr[2]/td[2]",
+          "Armor": "//table[@class = 'other']/tbody/tr[3]/td[2]",
+          "BaseAttackTime": "//table[@class = 'other']/tbody/tr[4]/td[2]",
+          "Damage": "//table[@class = 'other']/tbody/tr[5]/td[2]",
+          "AttackPoint": "//table[@class = 'other']/tbody/tr[6]/td[2]"
+        }
+      },
+      "MostPopularAbilitBuild": {
+        "Abilities": "//article[contains(@class, 'skill-choices smaller')]/div[contains(@class, 'skill')]",
+        "Icons": "//article[contains(@class, 'skill-choices smaller')]/div[contains(@class, 'skill')]//a/img"
+      }
+    }
+  },
+
+  "Abilities": {
+    "List": "//div[contains(@class, 'skill-tooltip')]/../../..",
+    "Image": "//div[contains(@class, 'skill-tooltip')]//a/img"
+  },
+
+  "Items": {
+    "Table": "//section/article/table/tbody",
+    "Name": "//section/article/table/tbody/tr[{0}]/td[2]/a/text()",
+    "Reference": "//section/article/table/tbody/tr[{0}]/td[2]/a",
+    "Item": {
+      "General": {
+        "Image": "/html[1]/body[1]/div[1]/div[7]/div[2]/div/div[1]/div[1]/div/a/img",
+        "Popularity": "/html[1]/body[1]/div[1]/div[7]/div[2]/div/div[2]/dl[1]/dd",
+        "WinRate": "/html[1]/body[1]/div[1]/div[7]/div[2]/div/div[2]/dl[2]/dd/span"
+      },
+      "Details": {
+        "Cost": "//section/article/div/div/div[3]/span/span",
+        "BuildsFrom": "//div[contains(@class, 'item-builds-from')]//div[contains(@class, 'order')]//div[contains(@class, 'image-container-item')]/a",
+        "BuildsInto": "//div[contains(@class, 'item-builds-into')]//div[contains(@class, 'order')]//div[contains(@class, 'image-container-item')]/a",
+        "Stats": "//div[contains(@class, 'stats')]//div[contains(@class, 'stat')]"
+      }
+    }
+  }
+}

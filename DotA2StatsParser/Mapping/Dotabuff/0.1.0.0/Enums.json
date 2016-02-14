@@ -1,0 +1,536 @@
+﻿{
+    "Enums": {
+        "Duration": {
+            "TwelveMin": {
+                "Dotabuff": "12-",
+                "Parser": "TwelveMin"
+            },
+            "TwentyMin": {
+                "Dotabuff": "20-",
+                "Parser": "TwentyMin"
+            },
+            "ThirtyMin": {
+                "Dotabuff": "30-",
+                "Parser": "ThirtyMin"
+            },
+            "FortyMin": {
+                "Dotabuff": "40-",
+                "Parser": "FortyMin"
+            },
+            "FiftyMin": {
+                "Dotabuff": "50-",
+                "Parser": "FiftyMin"
+            },
+            "SixtyMin": {
+                "Dotabuff": "60-",
+                "Parser": "SixtyMin"
+            },
+            "LessThan20": {
+                "Dotabuff": "0-20",
+                "Parser": "LessThan20"
+            },
+            "Between20And30": {
+                "Dotabuff": "20-30",
+                "Parser": "Between20And30"
+            },
+            "Between30And40": {
+                "Dotabuff": "30-40",
+                "Parser": "Between30And40"
+            },
+            "Between40And50": {
+                "Dotabuff": "40-50",
+                "Parser": "Between40And50"
+            },
+            "Between50And60": {
+                "Dotabuff": "50-60",
+                "Parser": "Between50And60"
+            }
+        },
+        "SkillBracket": {
+            "NormalSkill": {
+                "Dotabuff": "normal_skill",
+                "Parser": "NormalSkill"
+            },
+            "HighSkill": {
+                "Dotabuff": "high_skill",
+                "Parser": "HighSkill"
+            },
+            "VeryHighSkill": {
+                "Dotabuff": "very_high_skill",
+                "Parser": "VeryHighSkill"
+            }
+        },
+        "Lobby": {
+            "Normal": {
+                "Dotabuff": "normal_matchmaking",
+                "Parser": "Normal"
+            },
+            "Ranked": {
+                "Dotabuff": "ranked_matchmaking",
+                "Parser": "Ranked"
+            },
+            "Team": {
+                "Dotabuff": "team_matchmaking",
+                "Parser": "Team"
+            },
+            "Solo": {
+                "Dotabuff": "solo_matchmaking",
+                "Parser": "Solo"
+            },
+            "Custom": {
+                "Dotabuff": "custom",
+                "Parser": "Custom"
+            }
+        },
+        "Mode": {
+            "AbilityDraft": {
+                "Dotabuff": "ability_draft",
+                "Parser": "AbilityDraft"
+            },
+            "AllPick": {
+                "Dotabuff": "all_pick",
+                "Parser": "AllPick"
+            },
+            "AllRandom": {
+                "Dotabuff": "all_random",
+                "Parser": "AllRandom"
+            },
+            "CaptainsDraft": {
+                "Dotabuff": "captains_draft",
+                "Parser": "CaptainsDraft"
+            },
+            "CaptainsMode": {
+                "Dotabuff": "captains_mode",
+                "Parser": "CaptainsMode"
+            },
+            "LeastPlayed": {
+                "Dotabuff": "least_played",
+                "Parser": "LeastPlayed"
+            },
+            "LimitedHeroPool": {
+                "Dotabuff": "limited_hero_pool",
+                "Parser": "LimitedHeroPool"
+            },
+            "RandomDraft": {
+                "Dotabuff": "random_draft",
+                "Parser": "RandomDraft"
+            },
+            "AllRandomDeathMatch": {
+                "Dotabuff": "all_random_death_match",
+                "Parser": "AllRandomDeathMatch"
+            },
+            "OnevOneSoloMid": {
+                "Dotabuff": "1v1_solo_mid",
+                "Parser": "OnevOneSoloMid"
+            }
+        },
+        "Date": {
+            "Week": {
+                "Dotabuff": "week",
+                "Parser": "Week"
+            },
+            "Month": {
+                "Dotabuff": "month",
+                "Parser": "Month"
+            },
+            "ThreeMonth": {
+                "Dotabuff": "3month",
+                "Parser": "ThreeMonth"
+            },
+            "SixMonth": {
+                "Dotabuff": "6Month",
+                "Parser": "SixMonth"
+            },
+            "Year": {
+                "Dotabuff": "year",
+                "Parser": "year"
+            }
+        },
+        "Faction": {
+            "Dire": {
+                "Dotabuff": "dire",
+                "Parser": "dire"
+            },
+            "Radiant": {
+                "Dotabuff": "radiant",
+                "Parser": "radiant"
+            }
+        },
+        "Region": {
+            "USWest": {
+                "Dotabuff": "us_west",
+                "Parser": "USWest"
+            },
+            "USEast": {
+                "Dotabuff": "us_east",
+                "Parser": "USEast"
+            },
+            "EuropeWest": {
+                "Dotabuff": "europe_west",
+                "Parser": "EuropeWest"
+            },
+            "SouthKorea": {
+                "Dotabuff": "south_korea",
+                "Parser": "SouthKorea"
+            },
+            "SEAsia": {
+                "Dotabuff": "se_asia",
+                "Parser": "SEAsia"
+            },
+            "Chile": {
+                "Dotabuff": "chile",
+                "Parser": "Chile"
+            },
+            "Australia": {
+                "Dotabuff": "australia",
+                "Parser": "Australia"
+            },
+            "Russia": {
+                "Dotabuff": "russia",
+                "Parser": "Russia"
+            },
+            "EuropeEast": {
+                "Dotabuff": "europe_east",
+                "Parser": "EuropeEast"
+            },
+            "SouthAmerica": {
+                "Dotabuff": "south_america",
+                "Parser": "SouthAmerica"
+            },
+            "SouthAfrica": {
+                "Dotabuff": "south_africa",
+                "Parser": "SouthAfrica"
+            },
+            "China": {
+                "Dotabuff": "china",
+                "Parser": "China"
+            },
+            "Dubai": {
+                "Dotabuff": "dubai",
+                "Parser": "Dubai"
+            },
+            "Peru": {
+                "Dotabuff": "peru",
+                "Parser": "Peru"
+            },
+            "India": {
+                "Dotabuff": "india",
+                "Parser": "India"
+            }
+        },
+        "Heroes": {
+            "Abaddon": { "Dotabuff": "abaddon", "Parser": "Abaddon", "Name": "Abaddon" },
+            "Alchemist": { "Dotabuff": "alchemist", "Parser": "Alchemist", "Name": "Alchemist" },
+            "AncientApparition": { "Dotabuff": "ancient-apparition", "Parser": "AncientApparition", "Name": "Ancient Apparition" },
+            "AntiMage": { "Dotabuff": "anti-mage", "Parser": "AntiMage", "Name": "Anti-Mage" },
+            "ArcWarden": { "Dotabuff": "arc-warden", "Parser": "ArcWarden", "Name": "Arc Warden" },
+            "Axe": { "Dotabuff": "axe", "Parser": "Axe", "Name": "Axe" },
+            "Bane": { "Dotabuff": "bane", "Parser": "Bane", "Name": "Bane" },
+            "Batrider": { "Dotabuff": "batrider", "Parser": "Batrider", "Name": "Batrider" },
+            "Beastmaster": { "Dotabuff": "beastmaster", "Parser": "Beastmaster", "Name": "Beastmaster" },
+            "Bloodseeker": { "Dotabuff": "bloodseeker", "Parser": "Bloodseeker", "Name": "Bloodseeker" },
+            "BountyHunter": { "Dotabuff": "bounty-hunter", "Parser": "BountyHunter", "Name": "Bounty Hunter" },
+            "Brewmaster": { "Dotabuff": "brewmaster", "Parser": "Brewmaster", "Name": "Brewmaster" },
+            "Bristleback": { "Dotabuff": "bristleback", "Parser": "Bristleback", "Name": "Bristleback" },
+            "Broodmother": { "Dotabuff": "broodmother", "Parser": "Broodmother", "Name": "Broodmother" },
+            "CentaurWarrunner": { "Dotabuff": "centaur-warrunner", "Parser": "CentaurWarrunner", "Name": "Centaur Warrunner" },
+            "ChaosKnight": { "Dotabuff": "chaos-knight", "Parser": "ChaosKnight", "Name": "Chaos Knight" },
+            "Chen": { "Dotabuff": "chen", "Parser": "Chen", "Name": "Chen" },
+            "Clinkz": { "Dotabuff": "clinkz", "Parser": "Clinkz", "Name": "Clinkz" },
+            "Clockwerk": { "Dotabuff": "clockwerk", "Parser": "Clockwerk", "Name": "Clockwerk" },
+            "CrystalMaiden": { "Dotabuff": "crystal-maiden", "Parser": "CrystalMaiden", "Name": "Crystal Maiden" },
+            "DarkSeer": { "Dotabuff": "dark-seer", "Parser": "DarkSeer", "Name": "Dark Seer" },
+            "Dazzle": { "Dotabuff": "dazzle", "Parser": "Dazzle", "Name": "Dazzle" },
+            "DeathProphet": { "Dotabuff": "death-prophet", "Parser": "DeathProphet", "Name": "Death Prophet" },
+            "Disruptor": { "Dotabuff": "disruptor", "Parser": "Disruptor", "Name": "Disruptor" },
+            "Doom": { "Dotabuff": "doom", "Parser": "Doom", "Name": "Doom" },
+            "DragonKnight": { "Dotabuff": "dragon-knight", "Parser": "DragonKnight", "Name": "Dragon Knight" },
+            "DrowRanger": { "Dotabuff": "drow-ranger", "Parser": "DrowRanger", "Name": "Drow Ranger" },
+            "EarthSpirit": { "Dotabuff": "earth-spirit", "Parser": "EarthSpirit", "Name": "Earth Spirit" },
+            "Earthshaker": { "Dotabuff": "earthshaker", "Parser": "Earthshaker", "Name": "Earthshaker" },
+            "ElderTitan": { "Dotabuff": "elder-titan", "Parser": "ElderTitan", "Name": "Elder Titan" },
+            "EmberSpirit": { "Dotabuff": "ember-spirit", "Parser": "EmberSpirit", "Name": "Ember Spirit" },
+            "Enchantress": { "Dotabuff": "enchantress", "Parser": "Enchantress", "Name": "Enchantress" },
+            "Enigma": { "Dotabuff": "enigma", "Parser": "Enigma", "Name": "Enigma" },
+            "FacelessVoid": { "Dotabuff": "faceless-void", "Parser": "FacelessVoid", "Name": "Faceless Void" },
+            "Gyrocopter": { "Dotabuff": "gyrocopter", "Parser": "Gyrocopter", "Name": "Gyrocopter" },
+            "Huskar": { "Dotabuff": "huskar", "Parser": "Huskar", "Name": "Huskar" },
+            "Invoker": { "Dotabuff": "invoker", "Parser": "Invoker", "Name": "Invoker" },
+            "Io": { "Dotabuff": "io", "Parser": "Io", "Name": "Io" },
+            "Jakiro": { "Dotabuff": "jakiro", "Parser": "Jakiro", "Name": "Jakiro" },
+            "Juggernaut": { "Dotabuff": "juggernaut", "Parser": "Juggernaut", "Name": "Juggernaut" },
+            "KeeperoftheLight": { "Dotabuff": "keeper-of-the-light", "Parser": "KeeperoftheLight", "Name": "Keeper of the Light" },
+            "Kunkka": { "Dotabuff": "kunkka", "Parser": "Kunkka", "Name": "Kunkka" },
+            "LegionCommander": { "Dotabuff": "legion-commander", "Parser": "LegionCommander", "Name": "Legion Commander" },
+            "Leshrac": { "Dotabuff": "leshrac", "Parser": "Leshrac", "Name": "Leshrac" },
+            "Lich": { "Dotabuff": "lich", "Parser": "Lich", "Name": "Lich" },
+            "Lifestealer": { "Dotabuff": "lifestealer", "Parser": "Lifestealer", "Name": "Lifestealer" },
+            "Lina": { "Dotabuff": "lina", "Parser": "Lina", "Name": "Lina" },
+            "Lion": { "Dotabuff": "lion", "Parser": "Lion", "Name": "Lion" },
+            "LoneDruid": { "Dotabuff": "lone-druid", "Parser": "LoneDruid", "Name": "Lone Druid" },
+            "Luna": { "Dotabuff": "luna", "Parser": "Luna", "Name": "Luna" },
+            "Lycan": { "Dotabuff": "lycan", "Parser": "Lycan", "Name": "Lycan" },
+            "Magnus": { "Dotabuff": "magnus", "Parser": "Magnus", "Name": "Magnus" },
+            "Medusa": { "Dotabuff": "medusa", "Parser": "Medusa", "Name": "Medusa" },
+            "Meepo": { "Dotabuff": "meepo", "Parser": "Meepo", "Name": "Meepo" },
+            "Mirana": { "Dotabuff": "mirana", "Parser": "Mirana", "Name": "Mirana" },
+            "Morphling": { "Dotabuff": "morphling", "Parser": "Morphling", "Name": "Morphling" },
+            "NagaSiren": { "Dotabuff": "naga-siren", "Parser": "NagaSiren", "Name": "Naga Siren" },
+            "NaturesProphet": { "Dotabuff": "natures-prophet", "Parser": "NaturesProphet", "Name": "Nature's Prophet" },
+            "Necrophos": { "Dotabuff": "necrophos", "Parser": "Necrophos", "Name": "Necrophos" },
+            "NightStalker": { "Dotabuff": "night-stalker", "Parser": "NightStalker", "Name": "Night Stalker" },
+            "NyxAssassin": { "Dotabuff": "nyx-assassin", "Parser": "NyxAssassin", "Name": "Nyx Assassin" },
+            "OgreMagi": { "Dotabuff": "ogre-magi", "Parser": "OgreMagi", "Name": "Ogre Magi" },
+            "Omniknight": { "Dotabuff": "omniknight", "Parser": "Omniknight", "Name": "Omniknight" },
+            "Oracle": { "Dotabuff": "oracle", "Parser": "Oracle", "Name": "Oracle" },
+            "OutworldDevourer": { "Dotabuff": "outworld-devourer", "Parser": "OutworldDevourer", "Name": "Outworld Devourer" },
+            "PhantomAssassin": { "Dotabuff": "phantom-assassin", "Parser": "PhantomAssassin", "Name": "Phantom Assassin" },
+            "PhantomLancer": { "Dotabuff": "phantom-lancer", "Parser": "PhantomLancer", "Name": "Phantom Lancer" },
+            "Phoenix": { "Dotabuff": "phoenix", "Parser": "Phoenix", "Name": "Phoenix" },
+            "Puck": { "Dotabuff": "puck", "Parser": "Puck", "Name": "Puck" },
+            "Pudge": { "Dotabuff": "pudge", "Parser": "Pudge", "Name": "Pudge" },
+            "Pugna": { "Dotabuff": "pugna", "Parser": "Pugna", "Name": "Pugna" },
+            "QueenofPain": { "Dotabuff": "queen-of-pain", "Parser": "QueenofPain", "Name": "Queen of Pain" },
+            "Razor": { "Dotabuff": "razor", "Parser": "Razor", "Name": "Razor" },
+            "Riki": { "Dotabuff": "riki", "Parser": "Riki", "Name": "Riki" },
+            "Rubick": { "Dotabuff": "rubick", "Parser": "Rubick", "Name": "Rubick" },
+            "SandKing": { "Dotabuff": "sand-king", "Parser": "SandKing", "Name": "Sand King" },
+            "ShadowDemon": { "Dotabuff": "shadow-demon", "Parser": "ShadowDemon", "Name": "Shadow Demon" },
+            "ShadowFiend": { "Dotabuff": "shadow-fiend", "Parser": "ShadowFiend", "Name": "Shadow Fiend" },
+            "ShadowShaman": { "Dotabuff": "shadow-shaman", "Parser": "ShadowShaman", "Name": "Shadow Shaman" },
+            "Silencer": { "Dotabuff": "silencer", "Parser": "Silencer", "Name": "Silencer" },
+            "SkywrathMage": { "Dotabuff": "skywrath-mage", "Parser": "SkywrathMage", "Name": "Skywrath Mage" },
+            "Slardar": { "Dotabuff": "slardar", "Parser": "Slardar", "Name": "Slardar" },
+            "Slark": { "Dotabuff": "slark", "Parser": "Slark", "Name": "Slark" },
+            "Sniper": { "Dotabuff": "sniper", "Parser": "Sniper", "Name": "Sniper" },
+            "Spectre": { "Dotabuff": "spectre", "Parser": "Spectre", "Name": "Spectre" },
+            "SpiritBreaker": { "Dotabuff": "spirit-breaker", "Parser": "SpiritBreaker", "Name": "Spirit Breaker" },
+            "StormSpirit": { "Dotabuff": "storm-spirit", "Parser": "StormSpirit", "Name": "Storm Spirit" },
+            "Sven": { "Dotabuff": "sven", "Parser": "Sven", "Name": "Sven" },
+            "Techies": { "Dotabuff": "techies", "Parser": "Techies", "Name": "Techies" },
+            "TemplarAssassin": { "Dotabuff": "templar-assassin", "Parser": "TemplarAssassin", "Name": "Templar Assassin" },
+            "Terrorblade": { "Dotabuff": "terrorblade", "Parser": "Terrorblade", "Name": "Terrorblade" },
+            "Tidehunter": { "Dotabuff": "tidehunter", "Parser": "Tidehunter", "Name": "Tidehunter" },
+            "Timbersaw": { "Dotabuff": "timbersaw", "Parser": "Timbersaw", "Name": "Timbersaw" },
+            "Tinker": { "Dotabuff": "tinker", "Parser": "Tinker", "Name": "Tinker" },
+            "Tiny": { "Dotabuff": "tiny", "Parser": "Tiny", "Name": "Tiny" },
+            "TreantProtector": { "Dotabuff": "treant-protector", "Parser": "TreantProtector", "Name": "Treant Protector" },
+            "TrollWarlord": { "Dotabuff": "troll-warlord", "Parser": "TrollWarlord", "Name": "Troll Warlord" },
+            "Tusk": { "Dotabuff": "tusk", "Parser": "Tusk", "Name": "Tusk" },
+            "Undying": { "Dotabuff": "undying", "Parser": "Undying", "Name": "Undying" },
+            "Ursa": { "Dotabuff": "ursa", "Parser": "Ursa", "Name": "Ursa" },
+            "VengefulSpirit": { "Dotabuff": "vengeful-spirit", "Parser": "VengefulSpirit", "Name": "Vengeful Spirit" },
+            "Venomancer": { "Dotabuff": "venomancer", "Parser": "Venomancer", "Name": "Venomancer" },
+            "Viper": { "Dotabuff": "viper", "Parser": "Viper", "Name": "Viper" },
+            "Visage": { "Dotabuff": "visage", "Parser": "Visage", "Name": "Visage" },
+            "Warlock": { "Dotabuff": "warlock", "Parser": "Warlock", "Name": "Warlock" },
+            "Weaver": { "Dotabuff": "weaver", "Parser": "Weaver", "Name": "Weaver" },
+            "Windranger": { "Dotabuff": "windranger", "Parser": "Windranger", "Name": "Windranger" },
+            "WinterWyvern": { "Dotabuff": "winter-wyvern", "Parser": "WinterWyvern", "Name": "Winter Wyvern" },
+            "WitchDoctor": { "Dotabuff": "witch-doctor", "Parser": "WitchDoctor", "Name": "Witch Doctor" },
+            "WraithKing": { "Dotabuff": "wraith-king", "Parser": "WraithKing", "Name": "Wraith King" },
+            "Zeus": { "Dotabuff": "zeus", "Parser": "Zeus", "Name": "Zeus" }
+        },
+        "Items": {
+            "PowerTreads": { "Dotabuff": "power-treads", "Parser": "PowerTreads", "Name": "Power Treads" },
+            "TownportalScroll": { "Dotabuff": "town-portal-scroll", "Parser": "TownportalScroll", "Name": "Town Portal Scroll" },
+            "AghanimsScepter": { "Dotabuff": "aghanims-scepter", "Parser": "AghanimsScepter", "Name": "Aghanim's Scepter" },
+            "BlinkDagger": { "Dotabuff": "blink-dagger", "Parser": "BlinkDagger", "Name": "Blink Dagger" },
+            "PhaseBoots": { "Dotabuff": "phase-boots", "Parser": "PhaseBoots", "Name": "Phase Boots" },
+            "ArcaneBoots": { "Dotabuff": "arcane-boots", "Parser": "ArcaneBoots", "Name": "Arcane Boots" },
+            "MagicWand": { "Dotabuff": "magic-wand", "Parser": "MagicWand", "Name": "Magic Wand" },
+            "BlackKingBar": { "Dotabuff": "black-king-bar", "Parser": "BlackKingBar", "Name": "Black King Bar" },
+            "BootsOfTravel": { "Dotabuff": "boots-of-travel", "Parser": "BootsOfTravel", "Name": "Boots of Travel" },
+            "Bottle": { "Dotabuff": "bottle", "Parser": "Bottle", "Name": "Bottle" },
+            "Desolator": { "Dotabuff": "desolator", "Parser": "Desolator", "Name": "Desolator" },
+            "ShadowBlade": { "Dotabuff": "shadow-blade", "Parser": "ShadowBlade", "Name": "Shadow Blade" },
+            "TranquilBoots": { "Dotabuff": "tranquil-boots", "Parser": "TranquilBoots", "Name": "Tranquil Boots" },
+            "BattleFury": { "Dotabuff": "battle-fury", "Parser": "BattleFury", "Name": "Battle Fury" },
+            "BladeMail": { "Dotabuff": "blade-mail", "Parser": "BladeMail", "Name": "Blade Mail" },
+            "ForceStaff": { "Dotabuff": "force-staff", "Parser": "ForceStaff", "Name": "Force Staff" },
+            "SangeAndYasha": { "Dotabuff": "sange-and-yasha", "Parser": "SangeAndYasha", "Name": "Sange and Yasha" },
+            "AetherLens": { "Dotabuff": "aether-lens", "Parser": "AetherLens", "Name": "Aether Lens" },
+            "HelmOfTheDominator": { "Dotabuff": "helm-of-the-dominator", "Parser": "HelmOfTheDominator", "Name": "Helm of the Dominator" },
+            "MantaStyle": { "Dotabuff": "manta-style", "Parser": "MantaStyle", "Name": "Manta Style" },
+            "MonkeyKingBar": { "Dotabuff": "monkey-king-bar", "Parser": "MonkeyKingBar", "Name": "Monkey King Bar" },
+            "RingOfAquila": { "Dotabuff": "ring-of-aquila", "Parser": "RingOfAquila", "Name": "Ring of Aquila" },
+            "VladmirsOffering": { "Dotabuff": "vladmirs-offering", "Parser": "VladmirsOffering", "Name": "Vladmir's Offering" },
+            "EulsScepterOfDivinity": { "Dotabuff": "euls-scepter-of-divinity", "Parser": "EulsScepterOfDivinity", "Name": "Eul's Scepter of Divinity" },
+            "Daedalus": { "Dotabuff": "daedalus", "Parser": "Daedalus", "Name": "Daedalus" },
+            "UrnOfShadows": { "Dotabuff": "urn-of-shadows", "Parser": "UrnOfShadows", "Name": "Urn of Shadows" },
+            "HeartOfTarrasque": { "Dotabuff": "heart-of-tarrasque", "Parser": "HeartOfTarrasque", "Name": "Heart of Tarrasque" },
+            "BootsOfSpeed": { "Dotabuff": "boots-of-speed", "Parser": "BootsOfSpeed", "Name": "Boots of Speed" },
+            "SkullBasher": { "Dotabuff": "skull-basher", "Parser": "SkullBasher", "Name": "Skull Basher" },
+            "DustOfAppearance": { "Dotabuff": "dust-of-appearance", "Parser": "DustOfAppearance", "Name": "Dust of Appearance" },
+            "AssaultCuirass": { "Dotabuff": "assault-cuirass", "Parser": "AssaultCuirass", "Name": "Assault Cuirass" },
+            "Mekansm": { "Dotabuff": "mekansm", "Parser": "Mekansm", "Name": "Mekansm" },
+            "HandOfMidas": { "Dotabuff": "hand-of-midas", "Parser": "HandOfMidas", "Name": "Hand of Midas" },
+            "Crystalys": { "Dotabuff": "crystalys", "Parser": "Crystalys", "Name": "Crystalys" },
+            "ArmletOfMordiggian": { "Dotabuff": "armlet-of-mordiggian", "Parser": "ArmletOfMordiggian", "Name": "Armlet of Mordiggian" },
+            "OgreClub": { "Dotabuff": "ogre-club", "Parser": "OgreClub", "Name": "Ogre Club" },
+            "OrchidMalevolence": { "Dotabuff": "orchid-malevolence", "Parser": "OrchidMalevolence", "Name": "Orchid Malevolence" },
+            "Radiance": { "Dotabuff": "radiance", "Parser": "Radiance", "Name": "Radiance" },
+            "Nulltalisman": { "Dotabuff": "null-talisman", "Parser": "Nulltalisman", "Name": "Null Talisman" },
+            "MaskOfMadness": { "Dotabuff": "mask-of-madness", "Parser": "MaskOfMadness", "Name": "Mask of Madness" },
+            "LinkensSphere": { "Dotabuff": "linkens-sphere", "Parser": "LinkensSphere", "Name": "Linken's Sphere" },
+            "SoulRing": { "Dotabuff": "soul-ring", "Parser": "SoulRing", "Name": "Soul Ring" },
+            "Maelstrom": { "Dotabuff": "maelstrom", "Parser": "Maelstrom", "Name": "Maelstrom" },
+            "StoutShield": { "Dotabuff": "stout-shield", "Parser": "StoutShield", "Name": "Stout Shield" },
+            "DrumOfEndurance": { "Dotabuff": "drum-of-endurance", "Parser": "DrumOfEndurance", "Name": "Drum of Endurance" },
+            "EyeOfSkadi": { "Dotabuff": "eye-of-skadi", "Parser": "EyeOfSkadi", "Name": "Eye of Skadi" },
+            "ObserverWard": { "Dotabuff": "observer-ward", "Parser": "ObserverWard", "Name": "Observer Ward" },
+            "Mjollnir": { "Dotabuff": "mjollnir", "Parser": "Mjollnir", "Name": "Mjollnir" },
+            "GuardianGreaves": { "Dotabuff": "guardian-greaves", "Parser": "GuardianGreaves", "Name": "Guardian Greaves" },
+            "SilverEdge": { "Dotabuff": "silver-edge", "Parser": "SilverEdge", "Name": "Silver Edge" },
+            "Butterfly": { "Dotabuff": "butterfly", "Parser": "Butterfly", "Name": "Butterfly" },
+            "PointBooster": { "Dotabuff": "point-booster", "Parser": "PointBooster", "Name": "Point Booster" },
+            "AbyssalBlade": { "Dotabuff": "abyssal-blade", "Parser": "AbyssalBlade", "Name": "Abyssal Blade" },
+            "OctarineCore": { "Dotabuff": "octarine-core", "Parser": "OctarineCore", "Name": "Octarine Core" },
+            "QuellingBlade": { "Dotabuff": "quelling-blade", "Parser": "QuellingBlade", "Name": "Quelling Blade" },
+            "PoormansShield": { "Dotabuff": "poor-mans-shield", "Parser": "PoormansShield", "Name": "Poor Man's Shield" },
+            "Bracer": { "Dotabuff": "bracer", "Parser": "Bracer", "Name": "Bracer" },
+            "Yasha": { "Dotabuff": "yasha", "Parser": "Yasha", "Name": "Yasha" },
+            "Vanguard": { "Dotabuff": "vanguard", "Parser": "Vanguard", "Name": "Vanguard" },
+            "RefresherOrb": { "Dotabuff": "refresher-orb", "Parser": "RefresherOrb", "Name": "Refresher Orb" },
+            "MoonShard": { "Dotabuff": "moon-shard", "Parser": "MoonShard", "Name": "Moon Shard" },
+            "GhostScepter": { "Dotabuff": "ghost-scepter", "Parser": "GhostScepter", "Name": "Ghost Scepter" },
+            "StaffOfWizardry": { "Dotabuff": "staff-of-wizardry", "Parser": "StaffOfWizardry", "Name": "Staff of Wizardry" },
+            "ScytheOfVyse": { "Dotabuff": "scythe-of-vyse", "Parser": "ScytheOfVyse", "Name": "Scythe of Vyse" },
+            "GlimmerCape": { "Dotabuff": "glimmer-cape", "Parser": "GlimmerCape", "Name": "Glimmer Cape" },
+            "IronBranch": { "Dotabuff": "iron-branch", "Parser": "IronBranch", "Name": "Iron Branch" },
+            "Perseverance": { "Dotabuff": "perseverance", "Parser": "Perseverance", "Name": "Perseverance" },
+            "Bloodstone": { "Dotabuff": "bloodstone", "Parser": "Bloodstone", "Name": "Bloodstone" },
+            "GemOfTruesight": { "Dotabuff": "gem-of-true-sight", "Parser": "GemOfTruesight", "Name": "Gem of True Sight" },
+            "MagicStick": { "Dotabuff": "magic-stick", "Parser": "MagicStick", "Name": "Magic Stick" },
+            "ShivasGuard": { "Dotabuff": "shivas-guard", "Parser": "ShivasGuard", "Name": "Shiva's Guard" },
+            "OrbOfVenom": { "Dotabuff": "orb-of-venom", "Parser": "OrbOfVenom", "Name": "Orb of Venom" },
+            "RingOfBasilius": { "Dotabuff": "ring-of-basilius", "Parser": "RingOfBasilius", "Name": "Ring of Basilius" },
+            "MithrilHammer": { "Dotabuff": "mithril-hammer", "Parser": "MithrilHammer", "Name": "Mithril Hammer" },
+            "Hyperstone": { "Dotabuff": "hyperstone", "Parser": "Hyperstone", "Name": "Hyperstone" },
+            "SentryWard": { "Dotabuff": "sentry-ward", "Parser": "SentryWard", "Name": "Sentry Ward" },
+            "ObserverAndSentryWards": { "Dotabuff": "observer-and-sentry-wards", "Parser": "ObserverAndSentryWards", "Name": "Observer and Sentry Wards" },
+            "CrimsonGuard": { "Dotabuff": "crimson-guard", "Parser": "CrimsonGuard", "Name": "Crimson Guard" },
+            "Tango": { "Dotabuff": "tango", "Parser": "Tango", "Name": "Tango" },
+            "UltimateOrb": { "Dotabuff": "ultimate-orb", "Parser": "UltimateOrb", "Name": "Ultimate Orb" },
+            "PipeOfInsight": { "Dotabuff": "pipe-of-insight", "Parser": "PipeOfInsight", "Name": "Pipe of Insight" },
+            "DagonLevel5": { "Dotabuff": "dagon-level-5", "Parser": "DagonLevel5", "Name": "Dagon (level 5)" },
+            "DiffusalBlade": { "Dotabuff": "diffusal-blade", "Parser": "DiffusalBlade", "Name": "Diffusal Blade" },
+            "VeilOfDiscord": { "Dotabuff": "veil-of-discord", "Parser": "VeilOfDiscord", "Name": "Veil of Discord" },
+            "Satanic": { "Dotabuff": "satanic", "Parser": "Satanic", "Name": "Satanic" },
+            "DemonEdge": { "Dotabuff": "demon-edge", "Parser": "DemonEdge", "Name": "Demon Edge" },
+            "Javelin": { "Dotabuff": "javelin", "Parser": "Javelin", "Name": "Javelin" },
+            "Reaver": { "Dotabuff": "reaver", "Parser": "Reaver", "Name": "Reaver" },
+            "Platemail": { "Dotabuff": "platemail", "Parser": "Platemail", "Name": "Platemail" },
+            "DragonLance": { "Dotabuff": "dragon-lance", "Parser": "DragonLance", "Name": "Dragon Lance" },
+            "DivineRapier": { "Dotabuff": "divine-rapier", "Parser": "DivineRapier", "Name": "Divine Rapier" },
+            "VitalityBooster": { "Dotabuff": "vitality-booster", "Parser": "VitalityBooster", "Name": "Vitality Booster" },
+            "BootsOfTravelLevel2": { "Dotabuff": "boots-of-travel-level-2", "Parser": "BootsOfTravelLevel2", "Name": "Boots of Travel" },
+            "MysticStaff": { "Dotabuff": "mystic-staff", "Parser": "MysticStaff", "Name": "Mystic Staff" },
+            "WraithBand": { "Dotabuff": "wraith-band", "Parser": "WraithBand", "Name": "Wraith Band" },
+            "NecronomiconLevel3": { "Dotabuff": "necronomicon-level-3", "Parser": "NecronomiconLevel3", "Name": "Necronomicon (level 3)" },
+            "AegisOfTheImmortal": { "Dotabuff": "aegis-of-the-immortal", "Parser": "AegisOfTheImmortal", "Name": "Aegis of the Immortal" },
+            "DiffusalBladeLevel2": { "Dotabuff": "diffusal-blade-level-2", "Parser": "DiffusalBladeLevel2", "Name": "Diffusal Blade (level 2)" },
+            "BladeOfAlacrity": { "Dotabuff": "blade-of-alacrity", "Parser": "BladeOfAlacrity", "Name": "Blade of Alacrity" },
+            "RodOfAtos": { "Dotabuff": "rod-of-atos", "Parser": "RodOfAtos", "Name": "Rod of Atos" },
+            "EtherealBlade": { "Dotabuff": "ethereal-blade", "Parser": "EtherealBlade", "Name": "Ethereal Blade" },
+            "HeavensHalberd": { "Dotabuff": "heavens-halberd", "Parser": "HeavensHalberd", "Name": "Heaven's Halberd" },
+            "VoidStone": { "Dotabuff": "void-stone", "Parser": "VoidStone", "Name": "Void Stone" },
+            "SoulBooster": { "Dotabuff": "soul-booster", "Parser": "SoulBooster", "Name": "Soul Booster" },
+            "IronTalon": { "Dotabuff": "iron-talon", "Parser": "IronTalon", "Name": "Iron Talon" },
+            "MorbidMask": { "Dotabuff": "morbid-mask", "Parser": "MorbidMask", "Name": "Morbid Mask" },
+            "SolarCrest": { "Dotabuff": "solar-crest", "Parser": "SolarCrest", "Name": "Solar Crest" },
+            "HoodOfDefiance": { "Dotabuff": "hood-of-defiance", "Parser": "HoodOfDefiance", "Name": "Hood of Defiance" },
+            "Clarity": { "Dotabuff": "clarity", "Parser": "Clarity", "Name": "Clarity" },
+            "Dagon": { "Dotabuff": "dagon", "Parser": "Dagon", "Name": "Dagon" },
+            "Chainmail": { "Dotabuff": "chainmail", "Parser": "Chainmail", "Name": "Chainmail" },
+            "SmokeOfDeceit": { "Dotabuff": "smoke-of-deceit", "Parser": "SmokeOfDeceit", "Name": "Smoke of Deceit" },
+            "RingOfHealth": { "Dotabuff": "ring-of-health", "Parser": "RingOfHealth", "Name": "Ring of Health" },
+            "EagleSong": { "Dotabuff": "eaglesong", "Parser": "EagleSong", "Name": "Eaglesong" },
+            "Sange": { "Dotabuff": "sange", "Parser": "Sange", "Name": "Sange" },
+            "Headdress": { "Dotabuff": "headdress", "Parser": "Headdress", "Name": "Headdress" },
+            "MedallionOfCourage": { "Dotabuff": "medallion-of-courage", "Parser": "MedallionOfCourage", "Name": "Medallion of Courage" },
+            "GauntletsOfStrength": { "Dotabuff": "gauntlets-of-strength", "Parser": "GauntletsOfStrength", "Name": "Gauntlets of Strength" },
+            "HealingSalve": { "Dotabuff": "healing-salve", "Parser": "HealingSalve", "Name": "Healing Salve" },
+            "Broadsword": { "Dotabuff": "broadsword", "Parser": "Broadsword", "Name": "Broadsword" },
+            "BeltOfStrength": { "Dotabuff": "belt-of-strength", "Parser": "BeltOfStrength", "Name": "Belt of Strength" },
+            "ShadowAmulet": { "Dotabuff": "shadow-amulet", "Parser": "ShadowAmulet", "Name": "Shadow Amulet" },
+            "GlovesOfHaste": { "Dotabuff": "gloves-of-haste", "Parser": "GlovesOfHaste", "Name": "Gloves of Haste" },
+            "TalismanOfEvasion": { "Dotabuff": "talisman-of-evasion", "Parser": "TalismanOfEvasion", "Name": "Talisman of Evasion" },
+            "QuarterStaff": { "Dotabuff": "quarterstaff", "Parser": "QuarterStaff", "Name": "Quarterstaff" },
+            "EnchantedMango": { "Dotabuff": "enchanted-mango", "Parser": "EnchantedMango", "Name": "Enchanted Mango" },
+            "Cloak": { "Dotabuff": "cloak", "Parser": "Cloak", "Name": "Cloak" },
+            "Claymore": { "Dotabuff": "claymore", "Parser": "Claymore", "Name": "Claymore" },
+            "LotusOrb": { "Dotabuff": "lotus-orb", "Parser": "LotusOrb", "Name": "Lotus Orb" },
+            "DagonLevel2": { "Dotabuff": "dagon-level-2", "Parser": "DagonLevel2", "Name": "Dagon (level 2)" },
+            "DagonLevel3": { "Dotabuff": "dagon-level-3", "Parser": "DagonLevel3", "Name": "Dagon (level 3)" },
+            "SagesMask": { "Dotabuff": "sages-mask", "Parser": "SagesMask", "Name": "Sage's Mask" },
+            "DagonLevel4": { "Dotabuff": "dagon-level-4", "Parser": "DagonLevel4", "Name": "Dagon (level 4)" },
+            "SacredRelic": { "Dotabuff": "sacred-relic", "Parser": "SacredRelic", "Name": "Sacred Relic" },
+            "RingOfRegen": { "Dotabuff": "ring-of-regen", "Parser": "RingOfRegen", "Name": "Ring of Regen" },
+            "OblivionStaff": { "Dotabuff": "oblivion-staff", "Parser": "OblivionStaff", "Name": "Oblivion Staff" },
+            "SlippersOfAgility": { "Dotabuff": "slippers-of-agility", "Parser": "SlippersOfAgility", "Name": "Slippers of Agility" },
+            "EnergyBooster": { "Dotabuff": "energy-booster", "Parser": "EnergyBooster", "Name": "Energy Booster" },
+            "RobeOfTheMagi": { "Dotabuff": "robe-of-the-magi", "Parser": "RobeOfTheMagi", "Name": "Robe of the Magi" },
+            "BladesOfAttack": { "Dotabuff": "blades-of-attack", "Parser": "BladesOfAttack", "Name": "Blades of Attack" },
+            "Circlet": { "Dotabuff": "circlet", "Parser": "Circlet", "Name": "Circlet" },
+            "FaerieFire": { "Dotabuff": "faerie-fire", "Parser": "FaerieFire", "Name": "Faerie Fire" },
+            "RingOfProtection": { "Dotabuff": "ring-of-protection", "Parser": "RingOfProtection", "Name": "Ring of Protection" },
+            "Buckler": { "Dotabuff": "buckler", "Parser": "Buckler", "Name": "Buckler" },
+            "MantleOfIntelligence": { "Dotabuff": "mantle-of-intelligence", "Parser": "MantleOfIntelligence", "Name": "Mantle of Intelligence" },
+            "BandOfElvenskin": { "Dotabuff": "band-of-elvenskin", "Parser": "BandOfElvenskin", "Name": "Band of Elvenskin" },
+            "Cheese": { "Dotabuff": "cheese", "Parser": "Cheese", "Name": "Cheese" },
+            "Necronomicon": { "Dotabuff": "necronomicon", "Parser": "Necronomicon", "Name": "Necronomicon" },
+            "HelmOfIronwill": { "Dotabuff": "helm-of-iron-will", "Parser": "HelmOfIronwill", "Name": "Helm of Iron Will" },
+            "NecronomiconLevel2": { "Dotabuff": "necronomicon-level-2", "Parser": "NecronomiconLevel2", "Name": "Necronomicon (level 2)" },
+            "TangoShared": { "Dotabuff": "tango-shared", "Parser": "TangoShared", "Name": "Tango (Shared)" },
+            "AnimalCourier": { "Dotabuff": "animal-courier", "Parser": "AnimalCourier", "Name": "Animal Courier" },
+            "FlyingCourier": { "Dotabuff": "flying-courier", "Parser": "FlyingCourier", "Name": "Flying Courier" },
+            "RecipeAetherLens": { "Dotabuff": "recipe-aether-lens", "Parser": "RecipeAetherLens", "Name": "Recipe Aether Lens" },
+            "RecipeArmletOfMordiggian": { "Dotabuff": "recipe-armlet-of-mordiggian", "Parser": "RecipeArmletOfMordiggian", "Name": "Recipe Armelt of Mordiggian" },
+            "RecipeAssaultCuirass": { "Dotabuff": "recipe-assault-cuirass", "Parser": "RecipeAssaultCuirass", "Name": "Recipe Assault Cuirass" },
+            "RecipeBlackKingBar": { "Dotabuff": "recipe-black-king-bar", "Parser": "RecipeBlackKingBar", "Name": "Recipe Black King Bar" },
+            "RecipeBloodstone": { "Dotabuff": "recipe-bloodstone", "Parser": "RecipeBloodstone", "Name": "Recipe Bloodstone" },
+            "RecipeBootsofTravel": { "Dotabuff": "recipe-boots-of-travel", "Parser": "RecipeBootsofTravel", "Name": "Recipe Boots of Travel" },
+            "RecipeBracer": { "Dotabuff": "recipe-bracer", "Parser": "RecipeBracer", "Name": "Recipe Bracer" },
+            "RecipeBuckler": { "Dotabuff": "recipe-buckler", "Parser": "RecipeBuckler", "Name": "Recipe Buckler" },
+            "RecipeCrimsonGuard": { "Dotabuff": "recipe-crimson-guard", "Parser": "RecipeCrimsonGuard", "Name": "Recipe Crimson Guard" },
+            "RecipeCrystalys": { "Dotabuff": "recipe-crystalys", "Parser": "RecipeCrystalys", "Name": "Recipe Crystalys" },
+            "RecipeDaedalus": { "Dotabuff": "recipe-daedalus", "Parser": "RecipeDaedalus", "Name": "Recipe Daedalus" },
+            "RecipeDagon": { "Dotabuff": "recipe-dagon", "Parser": "RecipeDagon", "Name": "Recipe Dagon" },
+            "RecipeDesolator": { "Dotabuff": "recipe-desolator", "Parser": "RecipeDesolator", "Name": "Recipe Desolator" },
+            "RecipeDiffusalBlade": { "Dotabuff": "recipe-diffusal-blade", "Parser": "RecipeDiffusalBlade", "Name": "Recipe Diffusal Blade" },
+            "RecipeDrumOfEndurance": { "Dotabuff": "recipe-drum-of-endurance", "Parser": "RecipeDrumOfEndurance", "Name": "Recipe Drum of Endurance" },
+            "RecipeEulsScepterOfDivinity": { "Dotabuff": "recipe-euls-scepter-of-divinity", "Parser": "RecipeEulsScepterOfDivinity", "Name": "Recipe Euls Scepter of Divinity" },
+            "RecipeForceStaff": { "Dotabuff": "recipe-force-staff", "Parser": "RecipeForceStaff", "Name": "Recipe Force Staff" },
+            "RecipeGuardianGreaves": { "Dotabuff": "recipe-guardian-greaves", "Parser": "RecipeGuardianGreaves", "Name": "Recipe Guardian Greaves" },
+            "RecipeHandOfMidas": { "Dotabuff": "recipe-hand-of-midas", "Parser": "RecipeHandOfMidas", "Name": "Recipe Hand of Midas" },
+            "RecipeHeaddress": { "Dotabuff": "recipe-headdress", "Parser": "RecipeHeaddress", "Name": "Recipe Headdress" },
+            "RecipeHeartOfTarrasque": { "Dotabuff": "recipe-heart-of-tarrasque", "Parser": "RecipeHeartOfTarrasque", "Name": "Recipe Heart of Tarrasque" },
+            "RecipeIronTalon": { "Dotabuff": "recipe-iron-talon", "Parser": "RecipeIronTalon", "Name": "Recipe Iron Talon" },
+            "RecipeLinkensSphere": { "Dotabuff": "recipe-linkens-sphere", "Parser": "RecipeLinkensSphere", "Name": "Recipe Linkens Sphere" },
+            "RecipeLotusOrb": { "Dotabuff": "recipe-lotus-orb", "Parser": "RecipeLotusOrb", "Name": "Recipe Lotus Orb" },
+            "RecipeMaelstrom": { "Dotabuff": "recipe-maelstrom", "Parser": "RecipeMaelstrom", "Name": "Recipe Maelstrom" },
+            "RecipeMantaStyle": { "Dotabuff": "recipe-manta-style", "Parser": "RecipeMantaStyle", "Name": "Recipe Manta Style" },
+            "RecipeMaskOfMadness": { "Dotabuff": "recipe-mask-of-madness", "Parser": "RecipeMaskOfMadness", "Name": "Recipe Mask of Madness" },
+            "RecipeMedallionOfCourage": { "Dotabuff": "recipe-medallion-of-courage", "Parser": "RecipeMedallionOfCourage", "Name": "Recipe Medallion of Courage" },
+            "RecipeMekansm": { "Dotabuff": "recipe-mekansm", "Parser": "RecipeMekansm", "Name": "Recipe Mekansm" },
+            "RecipeMjollnir": { "Dotabuff": "recipe-mjollnir", "Parser": "RecipeMjollnir", "Name": "Recipe Mjollnir" },
+            "RecipeNecronomicon": { "Dotabuff": "recipe-necronomicon", "Parser": "RecipeNecronomicon", "Name": "Recipe Necronomicon" },
+            "RecipeNullTalisman": { "Dotabuff": "recipe-null-talisman", "Parser": "RecipeNullTalisman", "Name": "Recipe Null Talisman" },
+            "RecipeOrchidMalevolence": { "Dotabuff": "recipe-orchid-malevolence", "Parser": "RecipeOrchidMalevolence", "Name": "Recipe Orchid Malevolence" },
+            "RecipePipeOfInsight": { "Dotabuff": "recipe-pipe-of-insight", "Parser": "RecipePipeOfInsight", "Name": "Recipe Pipe of Insight" },
+            "RecipeRadiance": { "Dotabuff": "recipe-radiance", "Parser": "RecipeRadiance", "Name": "Recipe Radiance" },
+            "RecipeRefresherOrb": { "Dotabuff": "recipe-refresher-orb", "Parser": "RecipeRefresherOrb", "Name": "Recipe Refresher Orb" },
+            "RecipeSange": { "Dotabuff": "recipe-sange", "Parser": "RecipeSange", "Name": "Recipe Sange" },
+            "RecipeSatanic": { "Dotabuff": "recipe-satanic", "Parser": "RecipeSatanic", "Name": "Recipe Satanic" },
+            "RecipeShivasGuard": { "Dotabuff": "recipe-shivas-guard", "Parser": "RecipeShivasGuard", "Name": "Recipe Shivas Guard" },
+            "RecipeSilverEdge": { "Dotabuff": "recipe-silver-edge", "Parser": "RecipeSilverEdge", "Name": "Recipe SilverEdge" },
+            "RecipeSkullBasher": { "Dotabuff": "recipe-skull-basher", "Parser": "RecipeSkullBasher", "Name": "Recipe Skull Basher" },
+            "RecipeSoulRing": { "Dotabuff": "recipe-soul-ring", "Parser": "RecipeSoulRing", "Name": "Recipe Soul Ring" },
+            "RecipeUrnOfShadows": { "Dotabuff": "recipe-urn-of-shadows", "Parser": "RecipeUrnOfShadows", "Name": "Recipe Urn of Shadows" },
+            "RecipeVladmirsOffering": { "Dotabuff": "recipe-vladmirs-offering", "Parser": "RecipeVladmirsOffering", "Name": "Recipe Vladmirs Offering" },
+            "RecipeWraithBand": { "Dotabuff": "recipe-wraith-band", "Parser": "RecipeWraithBand", "Name": "Recipe Wraith Band" },
+            "RecipeYasha": { "Dotabuff": "recipe-yasha", "Parser": "RecipeYasha", "Name": "Recipe Yasha" }
+        }
+    }
+}

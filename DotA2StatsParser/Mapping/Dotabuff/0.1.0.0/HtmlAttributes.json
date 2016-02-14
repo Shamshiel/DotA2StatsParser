@@ -1,0 +1,32 @@
+﻿{
+   "Attributes": {
+    "Match": {
+      "Attribute": "data-link-to",
+      "Replace": "/matches/"
+    },
+    "Player": {
+      "Attribute": "data-link-to",
+      "Replace": "/players/"
+    },
+    "Hero": {
+      "Attribute": "href",
+      "Replace": "/heroes/"
+    },
+    "LastPlayedMatches": {
+      "ReferenceAttribute": "href",
+      "ImageAttribute": "src"
+    },
+    "Item": {
+      "Attribute": "href",
+      "Replace": "/items/"
+    },
+    "MostUsedItem": {
+      "Attribute": "data-link-to",
+      "Replace": "/items/"
+    },
+     "PlayerMatches": {
+      "Attribute": "href",
+      "Replace": "/matches/"
+    }
+  }
+}
