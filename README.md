@@ -3,7 +3,7 @@ A C# library for parsing data from [Dotabuff](http://www.dotabuff.com/) and [Yas
 
 ## Description
 This library was designed for real time analysis of data from [Dotabuff](http://www.dotabuff.com/) and [Yasp](https://yasp.co/).
-It will load the HTML representation of the requested data and parse it in a easy to use way.
+It will load the HTML representation of the requested data and parse it in an easy to use way.
 
 Parsing the HTML is done with the help of the [Html Agility Pack](https://htmlagilitypack.codeplex.com/).
 
@@ -34,7 +34,7 @@ Everyone is welcome to create a fork and to implement away.
 ## Installation
 Via NuGet:
 ```
-soon
+Install-Package DotA2StatsParser 
 ```
 
 Manual installation:
