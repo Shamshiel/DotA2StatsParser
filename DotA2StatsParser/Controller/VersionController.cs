@@ -33,7 +33,7 @@ namespace DotA2StatsParser.Controller
 
         internal void RefreshJsonPaths()
         {
-            dynamic versions = DownloadJsonFile(@"");
+            dynamic versions = DownloadJsonFile(@"https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Version.json");
 
             string currentVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
