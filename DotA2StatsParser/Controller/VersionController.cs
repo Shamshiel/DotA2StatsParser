@@ -62,6 +62,7 @@ namespace DotA2StatsParser.Controller
                     if (propertyInfo.Name.Contains(key))
                     {
                         string filePath = propertyInfo.GetValue(jsonPaths).ToString();
+                        CreateFolderIfNotExist(filePath);
 
                         dynamic downloadedJsonObject = DownloadJsonFile(urlDictioanry[key]);
                         downloadedJsonObject.LastDownload = DateTime.Now;
@@ -69,6 +70,15 @@ namespace DotA2StatsParser.Controller
                         RefreshJsonFile(filePath, downloadedJsonObject);
                     }
                 }
+            }
+        }
+
+        private void CreateFolderIfNotExist(string filePath)
+        {
+            string path = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
             }
         }
 
