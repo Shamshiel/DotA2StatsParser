@@ -2,20 +2,20 @@
     "0.1.0.0": {
         "IsDeprecated" : "false",
         "Dotabuff": {
-            "Enums": "",
-            "HtmlAttributes": "",
-            "QueryStrings": "",
-            "Selectors": "",
-            "Urls": "",
-            "XPaths": ""
+            "Enums": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Dotabuff/0.1.0.0/Enums.json",
+            "HtmlAttributes": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Dotabuff/0.1.0.0/HtmlAttributes.json",
+            "QueryStrings": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Dotabuff/0.1.0.0/QueryStrings.json",
+            "Selectors": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Dotabuff/0.1.0.0/Selectors.json",
+            "Urls": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Dotabuff/0.1.0.0/Urls.json",
+            "XPaths": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Dotabuff/0.1.0.0/XPaths.json"
         },
         "Yasp": {
-            "Enums": "",
-            "HtmlAttributes": "",
-            "QueryStrings": "",
-            "Selectors": "",
-            "Urls": "",
-            "XPaths": ""
+            "Enums": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Yasp/0.1.0.0/Enums.json",
+            "HtmlAttributes": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Yasp/0.1.0.0/HtmlAttributes.json",
+            "QueryStrings": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Yasp/0.1.0.0/QueryStrings.json",
+            "Selectors": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Yasp/0.1.0.0/Selectors.json",
+            "Urls": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Yasp/0.1.0.0/Urls.json",
+            "XPaths": "https://raw.githubusercontent.com/Shamshiel/DotA2StatsParser/master/DotA2StatsParser/Mapping/Yasp/0.1.0.0/XPaths.json"
         }
     }
 }
