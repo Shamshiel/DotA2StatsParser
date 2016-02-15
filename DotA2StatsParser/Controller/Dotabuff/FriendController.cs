@@ -30,19 +30,23 @@ namespace DotA2StatsParser.Controller.Dotabuff
             IEnumerable<HtmlNode> friendsNode = root.SelectNodes(PlayerPath.Friends.Value);
 
             List<Friend> friendList = new List<Friend>();
-            foreach (HtmlNode friendNode in friendsNode)
-            {
-                using (WebClient webClient = mainController.HtmlDocumentController.CreateWebclient())
-                {
-                    friendList.Add(new Friend()
-                                    {
-                                        PlayerImage = webClient.DownloadData(friendNode.Descendants(MainController.HTML_IMG_TAG).First().Attributes[MainController.HTML_ATTRIBUTE_SRC].Value),
-                                        Id = HtmlEntity.DeEntitize(friendNode.Attributes[HtmlAttributes.Player.Attribute.Value].Value).Replace(HtmlAttributes.Player.Replace.Value, ""),
-                                        Name = friendNode.ChildNodes[1].InnerText,
-                                        Matches = int.Parse(friendNode.ChildNodes[2].InnerText.Replace(",", "")),
-                                        WinRate = mainController.ConvertStringToWinRate(friendNode.ChildNodes[3].InnerText)
 
-                                    });
+            if (friendsNode != null)
+            {
+                foreach (HtmlNode friendNode in friendsNode)
+                {
+                    using (WebClient webClient = mainController.HtmlDocumentController.CreateWebclient())
+                    {
+                        friendList.Add(new Friend()
+                        {
+                            PlayerImage = webClient.DownloadData(friendNode.Descendants(MainController.HTML_IMG_TAG).First().Attributes[MainController.HTML_ATTRIBUTE_SRC].Value),
+                            Id =  HtmlEntity.DeEntitize(friendNode.Attributes[HtmlAttributes.Player.Attribute.Value].Value).Replace(HtmlAttributes.Player.Replace.Value, ""),
+                            Name = friendNode.ChildNodes[1].InnerText,
+                            Matches = int.Parse(friendNode.ChildNodes[2].InnerText.Replace(",", "")),
+                            WinRate = mainController.ConvertStringToWinRate(friendNode.ChildNodes[3].InnerText)
+
+                        });
+                    }
                 }
             }
 

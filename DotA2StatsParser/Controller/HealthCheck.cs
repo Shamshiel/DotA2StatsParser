@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using DotA2StatsParser.Exceptions;
 using DotA2StatsParser.Model.Dotabuff;
 using HtmlAgilityPack;
 using DotA2StatsParser.Model.HealthCheck.Interfaces;
@@ -41,6 +42,9 @@ namespace DotA2StatsParser.Controller
             try
             {
                 mainController.HtmlDocumentController.TryLoadingYasp();
+
+                IsUrlAvailable(mainController.YaspMappingController.GetAllUrlsAsDictionary(), "111620041");
+
                 return true;
             }
             catch (WebException)
@@ -70,6 +74,26 @@ namespace DotA2StatsParser.Controller
             catch (WebException)
             {
                 return false;
+            }
+        }
+
+        private void IsUrlAvailable(Dictionary<string, string> paths, string playerId)
+        {
+            foreach (string key in paths.Keys)
+            {
+                HtmlDocument html = new HtmlDocument();
+
+                try
+                {
+                    using (WebClient webclient = mainController.HtmlDocumentController.CreateWebclient())
+                    {
+                        html.LoadHtml(webclient.DownloadString(string.Format(paths[key], playerId)));
+                    }
+                }
+                catch (WebException webEx)
+                {
+                    throw new Dota2StatParserException(paths[key] + " is currently not available", webEx);
+                }
             }
         }
 

@@ -10,16 +10,32 @@ namespace DotA2StatsParser.Controller
 {
     internal class MappingController
     {
-        protected Dictionary<string, string> GetPathsAsDictionary(dynamic path)
+        private enum MappingOptions
+        {
+            All,
+            OnlyXPath
+        };
+
+        protected Dictionary<string, string> GetXPathsAsDictionary(dynamic path)
         {
             Dictionary<string, string> allPaths = new Dictionary<string, string>();
 
-            FillDictionaryWithPaths(path, string.Empty, allPaths);
+            FillDictionaryWithMappings(path, string.Empty, allPaths, MappingOptions.OnlyXPath);
 
             return allPaths;
         }
 
-        protected void FillDictionaryWithPaths(dynamic path, string keyChain, Dictionary<string, string> allPaths)
+        protected Dictionary<string, string> GetMappingAsDictionary(dynamic path)
+        {
+            Dictionary<string, string> allPaths = new Dictionary<string, string>();
+
+            FillDictionaryWithMappings(path, string.Empty, allPaths, MappingOptions.All);
+
+            return allPaths;
+        }
+
+
+        private void FillDictionaryWithMappings(dynamic path, string keyChain, Dictionary<string, string> allPaths, MappingOptions mappingOptions)
         {
             Dictionary<string, object> values = path.ToObject<Dictionary<string, object>>();
 
@@ -28,19 +44,19 @@ namespace DotA2StatsParser.Controller
                 if (values[key] is string)
                 {
                     // Ignore everything besides XPaths (for example URLs)
-                    if (!IsValidXPath(values[key].ToString()))
+                    if (!IsValidXPath(values[key].ToString()) && mappingOptions == MappingOptions.OnlyXPath)
                         continue;
 
                     allPaths.Add(keyChain + "/" + key, values[key].ToString());
                 }
                 else
                 {
-                    FillDictionaryWithPaths(values[key], keyChain + "/" + key, allPaths);
+                    FillDictionaryWithMappings(values[key], keyChain + "/" + key, allPaths, mappingOptions);
                 }
             }
         }
 
-        protected bool IsValidXPath(string xPathString)
+        private bool IsValidXPath(string xPathString)
         {
             XmlDocument doc = new XmlDocument();
             XPathNavigator nav = doc.CreateNavigator();

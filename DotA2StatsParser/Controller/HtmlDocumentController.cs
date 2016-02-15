@@ -103,6 +103,11 @@ namespace DotA2StatsParser.Controller
             return LoadDocumentNode(string.Format(DotabuffUrlPath.Players.Matches.URL.Value + mainController.QueryStringController.GetQueryString(playerMatchesOptions), playerId));
         }
 
+        internal HtmlNode GetDotabuffSteamIdPlayerRoot(string steamId)
+        {
+            return LoadDocumentNode(string.Format(DotabuffUrlPath.Search.SteamId.Value, steamId));
+        }
+
         internal HtmlNode GetDotabuffPlayerRoot(string playerId)
         {
             return LoadDocumentNode(string.Format("{0}{1}", DotabuffUrlPath.Players.URL.Value, playerId));

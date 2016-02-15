@@ -17,5 +17,10 @@ namespace DotA2StatsParser.Controller.Yasp
 
             dotabuffUrls = jsonReader.ReadFromFile(jsonPaths.UrlsUri);
         }
+
+        internal Dictionary<string, string> GetAllUrlsAsDictionary()
+        {
+            return GetMappingAsDictionary(UrlPath);
+        }
     }
 }

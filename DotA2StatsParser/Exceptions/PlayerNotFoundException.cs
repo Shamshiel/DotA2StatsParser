@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace DotA2StatsParser.Exceptions
 {
-    internal class Dota2StatParserException : Exception
+    internal class PlayerNotFoundException : Dota2StatParserException
     {
-        internal Dota2StatParserException(string message)
+        internal PlayerNotFoundException(string message)
             : base(message)
         {
 
         }
 
-        internal Dota2StatParserException(string message, Exception exception)
+        internal PlayerNotFoundException(string message, Exception exception)
             : base(message, exception)
         {
 

@@ -45,17 +45,17 @@ namespace DotA2StatsParser.Controller.Dotabuff
 
         internal Dictionary<string, string> GetPlayerPathsAsDictionary()
         {
-            return GetPathsAsDictionary(PlayerPath);
+            return GetXPathsAsDictionary(PlayerPath);
         }
 
         internal Dictionary<string, string> GetHeroPathsAsDictionary()
         {
-            return GetPathsAsDictionary(HeroPath);
+            return GetXPathsAsDictionary(HeroPath);
         }
 
         internal Dictionary<string, string> GetItemPathsAsDictionary()
         {
-            return GetPathsAsDictionary(ItemPath);
+            return GetXPathsAsDictionary(ItemPath);
         }
     }
 }

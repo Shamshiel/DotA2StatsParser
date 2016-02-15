@@ -1,20 +1,23 @@
 ﻿{
-    "URL": {
-        "Main": "http://www.dotabuff.com/",
-        "Players": {
-            "URL": "http://www.dotabuff.com/players/",
-            "Matches": {
-                "URL": "http://www.dotabuff.com/players/{0}/matches"
-            }
-        },
-        "Heroes": {
-            "URL": "http://www.dotabuff.com/heroes/",
-            "Abilities": {
-                "URL": "http://www.dotabuff.com/heroes/{0}/abilities"
-            }
-        },
-        "Items": {
-            "URL": "http://www.dotabuff.com/items/"
-        }
+  "URL": {
+    "Main": "http://www.dotabuff.com/",
+    "Players": {
+      "URL": "http://www.dotabuff.com/players/",
+      "Matches": {
+        "URL": "http://www.dotabuff.com/players/{0}/matches"
+      }
+    },
+    "Heroes": {
+      "URL": "http://www.dotabuff.com/heroes/",
+      "Abilities": {
+        "URL": "http://www.dotabuff.com/heroes/{0}/abilities"
+      }
+    },
+    "Items": {
+      "URL": "http://www.dotabuff.com/items/"
+    },
+    "Search": {
+      "SteamId": "http://www.dotabuff.com/search?utf8=%E2%9C%93&q={0}&commit=Search"
     }
+  }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using DotA2StatsParser.Exceptions;
 using DotA2StatsParser.Model.Dotabuff;
 using DotA2StatsParser.Model.Dotabuff.Interfaces;
 using DotA2StatsParser.Model.Dotabuff.Path;
@@ -32,6 +33,21 @@ namespace DotA2StatsParser.Controller.Dotabuff
             this.friendController = new FriendController(mainController);
             this.matchController = new MatchController(mainController);
             this.lifetimeStatController = new LifetimeStatController(mainController);
+        }
+
+        internal Player GetPlayerBySteamId(string steamId)
+        {
+            HtmlNode root = mainController.HtmlDocumentController.GetDotabuffSteamIdPlayerRoot(steamId);
+
+            if (root.InnerHtml.Contains("Search Results"))
+            {
+                throw new PlayerNotFoundException(string.Format("The player with the steam id '{0}' doesn't exist", steamId));
+            }
+
+            string playerId = root.SelectSingleNode(PlayerPath.PlayerId.Value).Attributes[HtmlAttributes.PlayerId.Attribute.Value].Value.Replace(
+                                    HtmlAttributes.PlayerId.Replace.Value, ""); 
+
+            return GetPlayer(playerId);
         }
 
         internal Player GetPlayer(string playerId)

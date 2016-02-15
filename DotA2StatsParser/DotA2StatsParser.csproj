@@ -52,6 +52,7 @@
     <Compile Include="Controller\Dotabuff\DotabuffMappingController.cs" />
     <Compile Include="Controller\Dotabuff\ItemDetailsController.cs" />
     <Compile Include="Controller\Dotabuff\ItemController.cs" />
+    <Compile Include="Controller\ExceptionController.cs" />
     <Compile Include="Controller\IQueryStringable.cs" />
     <Compile Include="Controller\MainController.InternalController.cs" />
     <Compile Include="Controller\MappingController.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Controller\Yasp\WordCloudController.cs" />
     <Compile Include="Controller\Yasp\YaspMappingController.cs" />
     <Compile Include="Exceptions\Dota2StatParserException.cs" />
+    <Compile Include="Exceptions\PlayerNotFoundException.cs" />
     <Compile Include="Model\Dotabuff\Ability.cs" />
     <Compile Include="Model\Dotabuff\AbilityBuild.cs" />
     <Compile Include="Model\Dotabuff\Interfaces\IItemStat.cs" />

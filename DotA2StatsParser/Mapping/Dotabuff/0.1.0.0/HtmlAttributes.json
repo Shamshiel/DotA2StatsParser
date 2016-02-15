@@ -8,6 +8,10 @@
       "Attribute": "data-link-to",
       "Replace": "/players/"
     },
+     "PlayerId": {
+      "Attribute": "href",
+      "Replace": "/players/"
+    },
     "Hero": {
       "Attribute": "href",
       "Replace": "/heroes/"

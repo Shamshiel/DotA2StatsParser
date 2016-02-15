@@ -28,6 +28,8 @@ namespace DotA2StatsParser
 
         private readonly MainController mainController;
 
+        private readonly ExceptionController exceptionController;
+
         /// <summary>
         /// Initializes a new instance of the Dataparser class.
         /// </summary>
@@ -45,6 +47,7 @@ namespace DotA2StatsParser
 
             mainController = new MainController(dotabuffMappingController, yaspMappingController);
             healthCheck = new HealthCheck(mainController);
+            exceptionController = new ExceptionController();
         }
 
         /// <summary>
@@ -65,8 +68,6 @@ namespace DotA2StatsParser
             }
             catch (Exception exception)
             {
-                mainController.Dispose();
-
                 throw new Dota2StatParserException("Something went wrong while parsing the item. See the innerexception for details!", exception);
             }
         }
@@ -89,9 +90,34 @@ namespace DotA2StatsParser
             }
             catch (Exception exception)
             {
-                mainController.Dispose();
-
                 throw new Dota2StatParserException("Something went wrong while parsing the hero. See the innerexception for details!", exception);
+            }
+        }
+
+        /// <summary>
+        /// Searches for a player with the Steam Id and gathers all the data from the Dotabuff Player-Page and combines it into a Player object.
+        /// </summary>
+        /// <param name="playerId">The Steam Id (not the Player Id)</param>
+        /// <returns>Will return the Player of your choice</returns>
+        public IPlayer GetPlayerPageDataBySteamId(string steamId)
+        {
+            if (string.IsNullOrEmpty(steamId))
+            {
+                throw new ArgumentNullException("steamId");
+            }
+
+            try
+            {
+                return mainController.PlayerController.GetPlayerBySteamId(steamId);
+            }
+            catch (WebException webException)
+            {
+                exceptionController.HandleWebException(string.Format("The player with the steam id '{0}' doesn't exist", steamId), webException);
+                throw;
+            }
+            catch (Exception exception)
+            {
+                throw new Dota2StatParserException("Something went wrong while parsing the player. See the innerexception for details!", exception);
             }
         }
 
@@ -102,14 +128,27 @@ namespace DotA2StatsParser
         /// <returns>Will return the Player of your choice</returns>
         public IPlayer GetPlayerPageData(string playerId)
         {
+            if (string.IsNullOrEmpty(playerId))
+            {
+                throw new ArgumentNullException("playerId");
+            }
+
+            if (!mainController.IsDigitsOnly(playerId))
+            {
+                throw new ArgumentException("The Player Identifier (playerId) can only contain digits!");
+            }
+
             try
             {
                 return mainController.PlayerController.GetPlayer(playerId);
             }
+            catch (WebException webException)
+            {
+                exceptionController.HandleWebException(string.Format("The player with the id '{0}' doesn't exist", playerId), webException);
+                throw;
+            }
             catch (Exception exception)
             {
-                mainController.Dispose();
-
                 throw new Dota2StatParserException("Something went wrong while parsing the player. See the innerexception for details!", exception);
             }
         }
@@ -128,8 +167,6 @@ namespace DotA2StatsParser
             }
             catch (Exception exception)
             {
-                mainController.Dispose();
-
                 throw new Dota2StatParserException("Something went wrong while parsing the player matches. See the innerexception for details!", exception);
             }
         }
@@ -147,8 +184,6 @@ namespace DotA2StatsParser
             }
             catch(Exception exception)
             {
-                mainController.Dispose();
-
                 throw new Dota2StatParserException("Something went wrong while parsing the word cloud. See the innerexception for details!", exception);
             }
         }

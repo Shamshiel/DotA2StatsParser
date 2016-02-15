@@ -1,6 +1,7 @@
 ﻿{
   "Players": {
     "Player": {
+      "PlayerId": "//div[contains(@class, 'image-container-player')]/a",
       "PlayerName": "//div[contains(@class, 'header-content-title')]/h1/text()",
       "PlayerImage": "//div[contains(@class, 'image-container-player')]/a/img",
       "LatestMatches": {
