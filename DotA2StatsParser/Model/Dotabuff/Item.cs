@@ -73,21 +73,6 @@ namespace DotA2StatsParser.Model.Dotabuff
         /// </value>
         public IEnumerable<IItem> BuildsInto { get; internal set; }
 
-        internal Item Copy()
-        {
-            Item defensiveCopy = new Item();
-            defensiveCopy.Name = this.Name;
-            defensiveCopy.Reference = this.Reference;
-            defensiveCopy.ItemEnum = this.ItemEnum;
-            defensiveCopy.Image = this.Image;
-            defensiveCopy.ItemDetails = this.ItemDetails;
-            defensiveCopy.WinRate = this.WinRate;
-            defensiveCopy.Popularity = this.Popularity;
-            defensiveCopy.BuildsFrom = this.BuildsFrom;
-            defensiveCopy.BuildsInto = this.BuildsInto;
-            return defensiveCopy;
-        }
-
         public override string ToString()
         {
             return Name;
@@ -95,10 +80,10 @@ namespace DotA2StatsParser.Model.Dotabuff
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Hero))
+            if (!(obj is Item))
                 return false;
 
-            return (obj as Hero).Name == this.Name && (obj as Hero).Reference == this.Reference;
+            return (obj as Item).Name == this.Name && (obj as Item).Reference == this.Reference;
         }
 
         public override int GetHashCode()
