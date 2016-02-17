@@ -172,6 +172,24 @@ namespace DotA2StatsParser
         }
 
         /// <summary>
+        /// Gathers a list of the most used items of the player with a certain hero.
+        /// </summary>
+        /// <param name="playerId">The Player Id (not the Steam Id)</param>
+        /// <param name="hero">The hero</param>
+        /// <returns>Will return the six most used items</returns>
+        public IEnumerable<IItem> GetMostUsedItemsFromPlayerWithHero(string playerId, Heroes hero)
+        {
+            try
+            {
+                return mainController.PlayerController.GetMostUsedItemsFromPlayerWithHero(playerId, hero);
+            }
+            catch (Exception exception)
+            {
+                throw new Dota2StatParserException("Something went wrong while parsing the player matches. See the innerexception for details!", exception);
+            }
+        }
+
+        /// <summary>
         /// Gets the word cloud from the Yasp WordCloud-Page of the player.
         /// </summary>
         /// <param name="playerId">The player identifier.</param>

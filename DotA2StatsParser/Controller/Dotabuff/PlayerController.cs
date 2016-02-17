@@ -70,6 +70,33 @@ namespace DotA2StatsParser.Controller.Dotabuff
             return player;
         }
 
+        internal IEnumerable<IItem> GetMostUsedItemsFromPlayerWithHero(string playerId, Heroes hero)
+        {
+            IEnumerable<IMatchExtended> matchesWithItems = GetMatchesFromPlayer(playerId,
+                new PlayerMatchesOptions() {Hero = hero});
+
+            Dictionary<IItem, int> mostUsedItemsFromPlayerWithHero = new Dictionary<IItem, int>();
+
+            foreach (IMatchExtended match in matchesWithItems)
+            {
+                foreach (IItem item in match.Items)
+                {
+                    if (mostUsedItemsFromPlayerWithHero.ContainsKey(item))
+                    {
+                        mostUsedItemsFromPlayerWithHero[item]++;
+                    }
+                    else
+                    {
+                        mostUsedItemsFromPlayerWithHero.Add(item, 1);
+                    }
+                }
+            }
+
+            var ordered = mostUsedItemsFromPlayerWithHero.OrderByDescending(x => x.Value).ToDictionary(pair => pair.Key, pair => pair.Value); 
+
+            return ordered.Keys.Take(6).ToList();
+        }
+
         internal IEnumerable<IMatchExtended> GetMatchesFromPlayer(string playerId, PlayerMatchesOptions playerMatchesOptions)
         {
             HtmlNode root = mainController.HtmlDocumentController.GetDotabuffPlayerMatchesRoot(playerId, playerMatchesOptions);
