@@ -43,7 +43,16 @@ namespace DotA2StatsParser.Controller
 
                 Dictionary<string, Dictionary<string, string>> allVersionsDictionary = GetAllVersion(versions, parsingWebsite);
 
-                Dictionary<string, string> urlDictioanry = allVersionsDictionary[currentVersion];
+                Dictionary<string, string> urlDictioanry = null;
+
+                if (allVersionsDictionary.ContainsKey(currentVersion))
+                {
+                    urlDictioanry = allVersionsDictionary[currentVersion];
+                }
+                else
+                {
+                    urlDictioanry = allVersionsDictionary.Last().Value;
+                }
 
                 if (urlDictioanry["IsDeprecated"] == "true")
                     throw new Dota2StatParserException("This version was declared deprecated and will not work properly. Please update to a newer version!");
